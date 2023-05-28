@@ -7,13 +7,10 @@ import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
-
+import { SiGmail } from "react-icons/si";
 import {
-    FaTwitter,
     FaLinkedin,
     FaGithub,
-    FaYoutube,
-    FaBlogger,
 } from 'react-icons/fa';
 
 function Landing() {
@@ -101,45 +98,21 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.twitter && (
+                        {socialsData.SiGmail && (
                             <a
-                                href={socialsData.twitter}
+                                href={socialsData.SiGmail}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaTwitter
+                                <SiGmail
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
+                                    aria-label='Gmail'
                                 />
                             </a>
                         )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
-                                />
-                            </a>
-                        )}
+
+
                     </div>
                 </div>
                 <img
