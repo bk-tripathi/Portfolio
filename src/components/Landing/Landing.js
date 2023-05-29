@@ -7,7 +7,7 @@ import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
-import { SiGmail } from "react-icons/si";
+import { AiFillMail } from "react-icons/ai";
 import {
     FaLinkedin,
     FaGithub,
@@ -98,16 +98,16 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.SiGmail && (
+                        {socialsData.AiFillMail && (
                             <a
-                                href={socialsData.SiGmail}
+                                href={socialsData.AiFillMail}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <SiGmail
+                                <AiFillMail
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='Gmail'
+                                    aria-label='mail'
                                 />
                             </a>
                         )}
