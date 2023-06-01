@@ -119,34 +119,20 @@ function Contacts() {
   const classes = useStyles();
 
   const handleContactForm = (e) => {
+    const formEle = document.querySelector("form");
     e.preventDefault();
+    console.log("submitted");
 
-    if (name && email && message) {
-      if (isEmail(email)) {
-        const responseData = {
-          name: name,
-          email: email,
-          message: message,
-        };
+    const formData = new FormData(formEle);
+    axios.post(
+      "https://script.google.com/macros/s/AKfycbzuoLWG4t8_6lhWpiBKAZER0JsYU_U6cYZCUW7N8HQ/dev",
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }).then((res) => res.json()).then((data) =>{
+        console.log(data)
+      }).catch((error) => console.log(error)); 
 
-        axios.post(contactsData.sheetAPI, responseData).then((res) => {
-          console.log("success");
-          setSuccess(true);
-          setErrMsg("");
-
-          setName("");
-          setEmail("");
-          setMessage("");
-          setOpen(false);
-        });
-      } else {
-        setErrMsg("Invalid email");
-        setOpen(true);
-      }
-    } else {
-      setErrMsg("Enter all the fields");
-      setOpen(true);
-    }
   };
 
   return (
