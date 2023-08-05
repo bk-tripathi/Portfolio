@@ -33,7 +33,7 @@
 
 # Demo :movie_camera:
 ![chrome_LyMT1P3Exm](https://github.com/bk-tripathi/portfolio/assets/91748467/b7bf6a94-e359-4545-9dd1-b7d10dd914f9)
-## View live demo [here](https://main--cool-taffy-82ad40.netlify.app/).
+## View live demo [here](https://bktportfolio02.netlify.app/)).
 
 <br />
 
